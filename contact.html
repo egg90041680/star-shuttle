@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="始发香港，通达世界。">
+<meta property="og:title" content="联络我们 — 星梭捷运">
+<meta property="og:description" content="始发香港，通达世界。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="星梭捷运">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="联络我们 — 星梭捷运">
+<meta name="twitter:description" content="始发香港，通达世界。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23111'/%3E%3Ccircle cx='16' cy='16' r='12.5' fill='none' stroke='%23fff' stroke-width='0.8'/%3E%3Cpath d='M10 19L16 7l6 12' fill='none' stroke='%23fff' stroke-width='0.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='16' cy='12' r='1.5' fill='%23fff'/%3E%3Cpath d='M6 16Q16 11 26 16' fill='none' stroke='%23fff' stroke-width='0.5' opacity='.5'/%3E%3C/svg%3E">
+<title>联络我们 — 星梭捷运</title>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+  body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","PingFang SC","Helvetica Neue",sans-serif;color:#333;background:#fff;line-height:1.6;min-height:100vh;display:flex;flex-direction:column}
+
+  /* Nav */
+  .nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:20px 48px;background:rgba(255,255,255,0.72);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(0,0,0,0.04)}
+  .nav-brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+  .nav-logo{width:28px;height:28px;border-radius:50%;background:#111;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .nav-logo svg{width:16px;height:16px}
+  .nav-name{font-weight:200;font-size:12px;letter-spacing:4px;color:#1a1a1a;text-transform:uppercase}
+  .nav-menu{display:flex;gap:32px;list-style:none}
+  .nav-menu a{font-size:11px;letter-spacing:2.5px;color:#6b6b6b;text-decoration:none;text-transform:uppercase;transition:color .2s ease}
+  .nav-menu a:hover{color:#111}
+  .nav-menu a.active{color:#111;border-bottom:1px solid #111;padding-bottom:2px}
+
+  /* Main */
+  .main{flex:1;display:flex;align-items:center;justify-content:center;padding:120px 48px 80px}
+  .content{width:100%;max-width:600px;text-align:center}
+
+  .title-zh{font-weight:100;font-size:clamp(32px,5vw,56px);letter-spacing:14px;color:#111;line-height:1.2}
+  .title-en{font-weight:200;font-size:12px;letter-spacing:6px;color:#888;margin-top:8px;text-transform:uppercase}
+  .divider{width:32px;height:1px;background:#ccc;margin:40px auto}
+
+  /* Email */
+  .email-section{margin:48px 0 56px}
+  .email-label{font-size:10px;letter-spacing:4px;color:#aaa;text-transform:uppercase;margin-bottom:12px}
+  .email-link{font-weight:200;font-size:clamp(18px,2.5vw,24px);letter-spacing:2px;color:#555;text-decoration:none;display:inline-block;padding:4px 8px;border-radius:2px;transition:all .35s ease}
+  .email-link.glow{color:#111;transform:scale(1.18)}
+  .email-hint{font-size:11px;letter-spacing:3px;color:#bbb;margin-top:8px}
+
+  /* Form */
+  .form-section{margin-top:64px;text-align:left}
+  .form-title{font-weight:200;font-size:14px;letter-spacing:6px;color:#1a1a1a;text-align:center;margin-bottom:36px}
+  .form{display:flex;flex-direction:column;gap:20px}
+  .form-field{display:flex;flex-direction:column;gap:6px}
+  .form-field label{font-size:10px;letter-spacing:3px;color:#999;text-transform:uppercase}
+  .form-field input,.form-field textarea{font-family:inherit;font-weight:300;font-size:14px;letter-spacing:1px;color:#333;background:#fff;border:1px solid #111;padding:14px 16px;outline:none;resize:vertical;transition:border-color .2s ease,background .2s ease}
+  .form-field input:focus,.form-field textarea:focus{border-color:#333;background:#fafafa}
+  .form-field textarea{min-height:120px}
+  .form-submit{align-self:center;font-family:inherit;font-weight:300;font-size:12px;letter-spacing:4px;color:#fff;background:#111;border:1px solid #111;padding:14px 48px;cursor:pointer;text-transform:uppercase;transition:all .3s ease}
+  .form-submit:hover{color:#111;background:#fff}
+  .form-status{text-align:center;font-size:11px;letter-spacing:2px;margin-top:12px;min-height:20px;color:#888}
+
+  /* Footer */
+  .footer{display:flex;justify-content:space-between;align-items:center;padding:36px 48px;background:#fff;border-top:1px solid #eee}
+  .footer-brand{display:flex;align-items:center;gap:8px}
+  .footer-logo{width:16px;height:16px;border-radius:50%;background:#111;flex-shrink:0}
+  .footer-name{font-weight:200;font-size:11px;letter-spacing:3px;color:#bbb;text-transform:uppercase}
+  .footer-copy{font-size:10px;letter-spacing:2px;color:#ccc}
+
+  /* Responsive */
+  @media (max-width:640px){
+    .nav{padding:16px 24px}
+    .main{padding:100px 24px 64px}
+    .title-zh{font-size:28px;letter-spacing:8px}
+    .email-link{font-size:16px}
+    .footer{flex-direction:column;gap:12px;text-align:center;padding:24px}
+  }
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav">
+  <a class="nav-brand" href="index.html">
+    <div class="nav-logo">
+      <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="#fff" stroke-width="1.2"/><path d="M8 14l4-8 4 8" stroke="#fff" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="8.5" r="1.5" fill="#fff"/></svg>
+    </div>
+    <span class="nav-name">Star Shuttle</span>
+  </a>
+  <ul class="nav-menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Main Content -->
+<main class="main">
+  <div class="content">
+
+    <div class="title-zh">联络我们</div>
+    <div class="title-en">Contact</div>
+    <div class="divider"></div>
+
+    <div class="email-section">
+      <div class="email-label">Email</div>
+      <a class="email-link" id="contactEmail" href="mailto:zhongjiaheng006049@gmail.com">zhongjiaheng006049@gmail.com</a>
+      <div class="email-hint">合作咨询 &middot; 航线申请</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="form-section">
+      <div class="form-title">Leave a Message</div>
+      <form class="form" id="contactForm">
+        <div class="form-field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="您的名称" required>
+        </div>
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required>
+        </div>
+        <div class="form-field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="请输入您的留言…" required></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send</button>
+        <div class="form-status" id="formStatus"></div>
+      </form>
+    </div>
+
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-brand">
+    <div class="footer-logo"></div>
+    <span class="footer-name">Star Shuttle Express</span>
+  </div>
+  <div class="footer-copy">&copy; 2026</div>
+</footer>
+
+<script>
+(function(){
+  // Email glow animation — 3s glow matching index.html contact effect
+  var email = document.getElementById('contactEmail');
+  email.addEventListener('click', function(e){
+    e.preventDefault();
+    this.classList.add('glow');
+    setTimeout(function(){ email.classList.remove('glow'); }, 3000);
+    window.location.href = 'mailto:zhongjiaheng006049@gmail.com';
+  });
+
+  // Form submit
+  var form = document.getElementById('contactForm');
+  var status = document.getElementById('formStatus');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    status.textContent = 'Thank you. We will get back to you soon.';
+    status.style.color = '#999';
+    form.reset();
+  });
+})();
+</script>
+
+</body>
+</html>
