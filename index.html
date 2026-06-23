@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="星梭捷运 STAR SHUTTLE EXPRESS — 高端航空货运与合作机场运营，香港始发，通达全球。">
+<meta property="og:title" content="星梭捷运 STAR SHUTTLE EXPRESS">
+<meta property="og:description" content="高端航空货运与合作机场运营，香港始发，通达全球。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="星梭捷运">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="星梭捷运 STAR SHUTTLE EXPRESS">
+<meta name="twitter:description" content="高端航空货运与合作机场运营，香港始发，通达全球。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23111'/%3E%3Ccircle cx='16' cy='16' r='12.5' fill='none' stroke='%23fff' stroke-width='0.8'/%3E%3Cpath d='M10 19L16 7l6 12' fill='none' stroke='%23fff' stroke-width='0.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='16' cy='12' r='1.5' fill='%23fff'/%3E%3Cpath d='M6 16Q16 11 26 16' fill='none' stroke='%23fff' stroke-width='0.5' opacity='.5'/%3E%3C/svg%3E">
+<title>星梭捷运 STAR SHUTTLE EXPRESS</title>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+  body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","PingFang SC","Helvetica Neue",sans-serif;color:#333;background:#fff;line-height:1.6;overflow-x:hidden}
+
+  /* Nav */
+  .nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:20px 48px;background:rgba(255,255,255,0);backdrop-filter:blur(0);-webkit-backdrop-filter:blur(0);border-bottom:1px solid transparent;transition:background .35s ease,backdrop-filter .35s ease,-webkit-backdrop-filter .35s ease,border-color .35s ease}
+  .nav.scrolled{background:rgba(255,255,255,0.72);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(0,0,0,0.04)}
+  .nav-brand{display:flex;align-items:center;gap:10px}
+  .nav-logo{width:28px;height:28px;border-radius:50%;background:#111;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .nav-logo svg{width:16px;height:16px}
+  .nav-name{font-weight:200;font-size:12px;letter-spacing:4px;color:#1a1a1a;text-transform:uppercase}
+  .nav-menu{display:flex;gap:32px;list-style:none}
+  .nav-menu a{font-size:11px;letter-spacing:2.5px;color:#6b6b6b;text-decoration:none;text-transform:uppercase;transition:color .2s ease}
+  .nav-menu a:hover{color:#111}
+  .nav-menu a.active{color:#111;border-bottom:1px solid #111;padding-bottom:2px}
+
+  /* Hero */
+  .hero{display:flex;align-items:center;justify-content:center;min-height:100vh;background:linear-gradient(180deg,#fff 0%,#f5f5f5 100%);position:relative;overflow:hidden;padding:120px 48px}
+  .hero-bg{position:absolute;inset:0;pointer-events:none;opacity:.05}
+  .hero-bg::before{content:'';position:absolute;bottom:0;left:0;right:0;height:55%;background:#000;clip-path:polygon(0% 100%,15% 40%,28% 55%,42% 28%,55% 45%,68% 18%,80% 38%,92% 22%,100% 50%,100% 100%)}
+  .hero-bg::after{content:'';position:absolute;bottom:0;left:0;right:0;height:40%;background:#222;clip-path:polygon(0% 100%,10% 55%,22% 65%,35% 42%,50% 58%,63% 35%,78% 52%,90% 30%,100% 60%,100% 100%)}
+  .hero-inner{display:flex;align-items:center;gap:80px;position:relative;z-index:1}
+  .hero-logo{width:140px;height:140px;border-radius:50%;background:#111;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .hero-logo svg{width:60px;height:60px}
+  .hero-text{text-align:left}
+  .hero-zh{font-weight:200;font-size:clamp(36px,6vw,80px);letter-spacing:14px;color:#111;line-height:1.15}
+  .hero-en{font-weight:200;font-size:clamp(12px,1.4vw,16px);letter-spacing:8px;color:#555;margin-top:10px}
+  .hero-line{width:28px;height:1px;background:#bbb;margin:20px 0}
+  .hero-tagline{font-weight:300;font-size:11px;letter-spacing:6px;color:#aaa}
+
+  /* Section */
+  .section{padding:120px 48px}
+  .section-title{font-weight:200;font-size:28px;letter-spacing:8px;color:#1a1a1a;margin-bottom:8px}
+  .section-divider{width:32px;height:1px;background:#ccc;margin-bottom:56px}
+
+  /* Fleet */
+  .fleet{background:#fff}
+  .fleet-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .fleet-card{background:linear-gradient(135deg,#1a1a1a 0%,#2a2a2a 40%,#111 100%);overflow:hidden;cursor:pointer;transition:transform .3s ease,box-shadow .3s ease;position:relative}
+  .fleet-card:hover{transform:translateY(-4px);box-shadow:0 0 0 1px rgba(255,255,255,0.12),0 12px 40px rgba(0,0,0,0.18)}
+  .fleet-card-art{aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+  .fleet-card-art svg{width:70%;height:70%;opacity:.24;transition:opacity .3s ease}
+  .fleet-card:hover .fleet-card-art svg{opacity:.4}
+  .fleet-card-info{padding:16px 20px 20px}
+  .fleet-card-en{font-size:10px;letter-spacing:3px;color:#666;margin-bottom:4px;text-transform:uppercase}
+  .fleet-card-zh{font-weight:200;font-size:16px;letter-spacing:2px;color:#ddd}
+  .fleet-card-model{font-size:9px;letter-spacing:2px;color:#555;margin-top:4px}
+
+  /* Noise texture for dark sections */
+  .fleet-card::after{content:'';position:absolute;inset:0;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");opacity:0.04;z-index:0}
+  .fleet-card-info{position:relative;z-index:1}
+  .advantages::before{content:'';position:absolute;inset:0;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");opacity:0.03;z-index:0}
+  #about>*{position:relative;z-index:1}
+
+  /* Lightbox */
+  .lightbox{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,0.92);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .35s ease;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+  .lightbox.open{opacity:1;pointer-events:auto}
+  .lightbox img{max-width:85vw;max-height:80vh;object-fit:contain;opacity:0;transform:scale(.94);transition:opacity .4s ease,transform .4s ease}
+  .lightbox.open img{opacity:1;transform:scale(1)}
+  .lightbox-close{position:absolute;top:24px;right:32px;width:40px;height:40px;background:none;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center}
+  .lightbox-close::before,.lightbox-close::after{content:'';position:absolute;width:20px;height:1px;background:#888;transition:background .2s ease}
+  .lightbox-close::before{transform:rotate(45deg)}
+  .lightbox-close::after{transform:rotate(-45deg)}
+  .lightbox-close:hover::before,.lightbox-close:hover::after{background:#fff}
+  .lightbox-label{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);font-size:11px;letter-spacing:3px;color:#888;text-transform:uppercase}
+
+  /* Routes */
+  .routes{background:#fff}
+  .routes-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+  .route-panel{background:#fff;border:1px solid #e5e5e5;padding:36px 32px}
+  .route-type{font-size:13px;font-weight:300;letter-spacing:4px;color:#111;margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid #eee}
+  .route-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px}
+  .route-list li{display:flex;align-items:baseline;gap:10px;font-size:13px;letter-spacing:1px}
+  .route-code{font-weight:300;color:#111;min-width:36px}
+  .route-arrow{color:#999;font-weight:200;margin:0 2px}
+  .route-name{font-weight:200;color:#777}
+
+  /* Advantages */
+  .advantages{background:#1a1a1a;position:relative}
+  .advantages .section-title{color:#ddd}
+  .advantages .section-divider{background:#444}
+  .advantages-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:80px;text-align:center}
+  .adv-icon{width:48px;height:48px;border:1px solid #444;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;transition:border-color .3s ease}
+  .adv-item:hover .adv-icon{border-color:#888}
+  .adv-icon svg{width:20px;height:20px}
+  .adv-title{font-weight:300;font-size:13px;letter-spacing:4px;color:#ddd;margin-bottom:12px;text-transform:uppercase}
+  .adv-desc{font-size:11px;color:#777;line-height:2;max-width:220px;margin:0 auto}
+
+  /* Footer */
+  .footer{display:flex;justify-content:space-between;align-items:center;padding:36px 48px;background:#fff;border-top:1px solid #eee}
+  .footer-brand{display:flex;align-items:center;gap:8px}
+  .footer-logo{width:16px;height:16px;border-radius:50%;background:#111;flex-shrink:0}
+  .footer-name{font-weight:200;font-size:11px;letter-spacing:3px;color:#bbb;text-transform:uppercase}
+  .footer-copy{font-size:10px;letter-spacing:2px;color:#ccc}
+  .contact-email{font-weight:300;color:#bbb;transition:all .4s ease;padding:4px 8px;border-radius:2px}
+  .contact-email.glow{color:#111;transform:scale(1.18);transition:all .35s ease}
+  .footer-links{display:flex;gap:6px;font-size:10px;letter-spacing:2px;color:#bbb;margin-top:6px}
+  .footer-links a{color:#bbb;text-decoration:none;transition:color .2s ease}
+  .footer-links a:hover{color:#111}
+
+  /* Fade-in */
+  .fade-in{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+  .fade-in.visible{opacity:1;transform:translateY(0)}
+
+  /* Responsive */
+  @media (max-width:1024px){
+    .hero-inner{flex-direction:column;text-align:center;gap:40px}
+    .hero-text{text-align:center}
+    .hero-line{margin:20px auto}
+    .hero-logo{width:100px;height:100px}
+    .hero-logo svg{width:44px;height:44px}
+    .fleet-grid{grid-template-columns:repeat(2,1fr)}
+    .advantages-grid{grid-template-columns:1fr;gap:48px}
+    .nav{padding:16px 24px}
+    .nav-menu{gap:16px}
+    .section{padding:80px 24px}
+  }
+  @media (max-width:640px){
+    .hero-zh{font-size:32px;letter-spacing:8px}
+    .hero-en{font-size:12px;letter-spacing:4px}
+    .hero-tagline{font-size:10px;letter-spacing:3px}
+    .fleet-grid{grid-template-columns:1fr}
+    .nav-menu{display:none}
+    .footer{flex-direction:column;gap:12px;text-align:center}
+    .section{padding:64px 20px}
+    .hero-inner{gap:24px}
+  }
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav" id="nav">
+  <div class="nav-brand">
+    <div class="nav-logo">
+      <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="#fff" stroke-width="1.2"/><path d="M8 14l4-8 4 8" stroke="#fff" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="8.5" r="1.5" fill="#fff"/></svg>
+    </div>
+    <span class="nav-name">Star Shuttle</span>
+  </div>
+  <ul class="nav-menu">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#fleet">Fleet</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#routes">Routes</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <div class="hero-logo">
+      <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <defs><clipPath id="hcircle"><circle cx="32" cy="32" r="28"/></clipPath></defs>
+        <circle cx="32" cy="32" r="30" fill="none" stroke="#fff" stroke-width="1.5"/>
+        <g clip-path="url(#hcircle)">
+          <path d="M18 38 L32 10 L46 38" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="32" cy="22" r="3" fill="#fff"/>
+          <path d="M10 32 Q32 20 54 32" fill="none" stroke="#fff" stroke-width="0.8" opacity="0.5"/>
+        </g>
+      </svg>
+    </div>
+    <div class="hero-text">
+      <div class="hero-zh">星梭捷运</div>
+      <div class="hero-en">STAR SHUTTLE EXPRESS</div>
+      <div class="hero-line"></div>
+      <div class="hero-tagline">FROM HERE TO WORLD</div>
+    </div>
+  </div>
+</section>
+
+<!-- Fleet -->
+<section class="section fleet fade-in" id="fleet">
+  <div class="section-title">OUR FLEET</div>
+  <div class="section-divider"></div>
+  <div class="fleet-grid">
+
+    <div class="fleet-card" onclick="openLightbox('fleet-standard.png','STANDARD · 通用涂装')">
+      <div class="fleet-card-art" style="background:linear-gradient(135deg,#1a1a1a 0%,#252525 50%,#111 100%);">
+        <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="20,0 55,120 68,120 33,0" fill="#fff" opacity="0.18"/>
+          <polygon points="70,0 105,120 118,120 83,0" fill="#fff" opacity="0.28"/>
+          <polygon points="120,0 155,120 168,120 133,0" fill="#fff" opacity="0.12"/>
+          <polygon points="160,0 185,120 192,120 167,0" fill="#fff" opacity="0.06"/>
+          <line x1="0" y1="105" x2="195" y2="15" stroke="#fff" stroke-width="0.6" opacity="0.24"/>
+          <line x1="0" y1="115" x2="195" y2="25" stroke="#fff" stroke-width="0.3" opacity="0.12"/>
+        </svg>
+      </div>
+      <div class="fleet-card-info">
+        <div class="fleet-card-en">STANDARD</div>
+            <div class="fleet-card-model">适用于全机队</div>
+        <div class="fleet-card-zh">通用涂装</div>
+      </div>
+    </div>
+
+    <div class="fleet-card" onclick="openLightbox('fleet-muscat.png','MUSCAT · 马斯喀特涂装')">
+      <div class="fleet-card-art" style="background:linear-gradient(135deg,#2a2a2a 0%,#383838 50%,#222 100%);">
+        <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 50 Q50 20 100 30 Q150 40 200 15" fill="none" stroke="#fff" stroke-width="1" opacity="0.35"/>
+          <path d="M0 60 Q55 32 105 42 Q150 50 200 28" fill="none" stroke="#fff" stroke-width="0.7" opacity="0.22"/>
+          <path d="M0 70 Q48 48 98 55 Q140 60 200 40" fill="none" stroke="#fff" stroke-width="0.5" opacity="0.14"/>
+          <path d="M0 80 Q45 60 95 65 Q135 70 200 52" fill="none" stroke="#fff" stroke-width="0.35" opacity="0.08"/>
+          <circle cx="170" cy="15" r="3" fill="#fff" opacity="0.2"/>
+          <circle cx="175" cy="8" r="1.5" fill="#fff" opacity="0.15"/>
+        </svg>
+      </div>
+      <div class="fleet-card-info">
+        <div class="fleet-card-en">MUSCAT</div>
+            <div class="fleet-card-model">适用于全机队</div>
+        <div class="fleet-card-zh">马斯喀特涂装</div>
+      </div>
+    </div>
+
+    <div class="fleet-card" onclick="openLightbox('fleet-london.png','LONDON · 伦敦涂装')">
+      <div class="fleet-card-art" style="background:linear-gradient(135deg,#1e1e1e 0%,#2e2e2e 50%,#181818 100%);">
+        <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="100" cy="50" r="44" fill="none" stroke="#fff" stroke-width="0.8" opacity="0.3"/>
+          <circle cx="100" cy="50" r="28" fill="none" stroke="#fff" stroke-width="0.5" opacity="0.18"/>
+          <rect x="55" y="40" width="90" height="75" fill="none" stroke="#fff" stroke-width="0.4" opacity="0.12" rx="45"/>
+          <line x1="40" y1="50" x2="160" y2="50" stroke="#fff" stroke-width="0.3" opacity="0.1"/>
+          <line x1="100" y1="10" x2="100" y2="90" stroke="#fff" stroke-width="0.3" opacity="0.1"/>
+        </svg>
+      </div>
+      <div class="fleet-card-info">
+        <div class="fleet-card-en">LONDON</div>
+            <div class="fleet-card-model">适用于全机队</div>
+        <div class="fleet-card-zh">伦敦涂装</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Brand Advantages -->
+<section class="section advantages fade-in" id="about">
+  <div class="section-title">OPERATIONS</div>
+  <div class="section-divider"></div>
+  <p style="text-align:center;font-size:11px;color:#555;letter-spacing:3px;margin-bottom:64px;text-transform:uppercase;">合作机场运营规则</p>
+  <div class="advantages-grid">
+
+    <div class="adv-item">
+      <div class="adv-icon">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="10" stroke="#888" stroke-width="1.2"/>
+          <path d="M12 6v6l4 2" stroke="#888" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="12" cy="12" r="2" fill="#888" opacity="0.3"/>
+        </svg>
+      </div>
+      <div class="adv-title">调度频率</div>
+      <div class="adv-desc">异地及本地航线均需保持<br>每 7 天至少 1 次互飞</div>
+    </div>
+
+    <div class="adv-item">
+      <div class="adv-icon">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L2 20h20L12 2z" stroke="#888" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <line x1="12" y1="11" x2="12" y2="15" stroke="#888" stroke-width="1.2" stroke-linecap="round"/>
+          <circle cx="12" cy="17.5" r="0.8" fill="#888"/>
+        </svg>
+      </div>
+      <div class="adv-title">延误处理</div>
+      <div class="adv-desc">超时未处理享 3 周宽限期<br>逾期仍未完成将终止合约</div>
+    </div>
+
+    <div class="adv-item">
+      <div class="adv-icon">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="#888" stroke-width="1.2" stroke-linecap="round"/>
+          <polyline points="14,2 14,8 20,8" stroke="#888" stroke-width="1.2" stroke-linecap="round"/>
+          <line x1="8" y1="13" x2="16" y2="13" stroke="#888" stroke-width="0.8" opacity="0.5"/>
+          <line x1="8" y1="17" x2="14" y2="17" stroke="#888" stroke-width="0.8" opacity="0.5"/>
+        </svg>
+      </div>
+      <div class="adv-title">合约续期</div>
+      <div class="adv-desc" style="text-align:left;max-width:240px;margin:0 auto;">
+        默认完成 10 次飞行后不取消<br>
+        合约默认自动续期<br>
+        完成后可手动取消，须提前告知<br>
+        更换机场可手动取消，须提前告知<br>
+        单方面取消将在群内通知
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Routes -->
+<section class="section routes fade-in" id="routes">
+  <div class="section-title">ROUTES</div>
+  <div class="section-divider"></div>
+  <p style="text-align:center;font-size:11px;color:#555;letter-spacing:3px;margin-bottom:56px;text-transform:uppercase;">香港始发 · 全球直达</p>
+  <div class="routes-grid">
+    <div class="route-panel">
+      <div class="route-type">Airbus A380</div>
+      <ul class="route-list">
+        <li><span class="route-code">HKG</span><span class="route-arrow">→</span><span class="route-code">LHR</span><span class="route-name">伦敦</span></li>
+        <li><span class="route-code">HKG</span><span class="route-arrow">→</span><span class="route-code">MCT</span><span class="route-name">马斯喀特</span></li>
+        <li><span class="route-code">HKG</span><span class="route-arrow">→</span><span class="route-code">SYD</span><span class="route-name">悉尼</span></li>
+      </ul>
+    </div>
+    <div class="route-panel">
+      <div class="route-type">Boeing 77W</div>
+      <ul class="route-list">
+        <li><span class="route-code">HKG</span><span class="route-arrow">→</span><span class="route-code">LHR</span><span class="route-name">伦敦</span></li>
+        <li><span class="route-code">HKG</span><span class="route-arrow">→</span><span class="route-code">MCT</span><span class="route-name">马斯喀特</span></li>
+        <li><span class="route-code">HKG</span><span class="route-arrow">→</span><span class="route-code">IAD</span><span class="route-name">华盛顿</span></li>
+        <li><span class="route-code">HKG</span><span class="route-arrow">→</span><span class="route-code">PRG</span><span class="route-name">布拉格</span></li>
+        <li><span class="route-code">HKG</span><span class="route-arrow">→</span><span class="route-code">ZRH</span><span class="route-name">苏黎世</span></li>
+        <li><span class="route-code">HKG</span><span class="route-arrow">→</span><span class="route-code">SYD</span><span class="route-name">悉尼</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer" id="contact">
+  <div class="footer-brand">
+    <div class="footer-logo"></div>
+    <span class="footer-name">Star Shuttle Express</span>
+  </div>
+  <div class="footer-links">
+    <a href="#home">Home</a> · <a href="#fleet">Fleet</a> · <a href="#about">About</a> · <a href="#routes">Routes</a> · <a href="#contact">Contact</a>
+  </div>
+  <div class="footer-copy">&copy; 2026 &nbsp;·&nbsp; <span class="contact-email" id="contactEmail">zhongjiaheng006049@gmail.com</span></div>
+</footer>
+
+<script>
+  // Nav scroll effect
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+  });
+
+  // Fade-in observer
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Scroll spy
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-menu a');
+
+  function setActiveLink(id) {
+    navLinks.forEach(link => {
+      link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+    });
+  }
+
+  const spyObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        setActiveLink(entry.target.id);
+      }
+    });
+  }, { threshold: 0.3, rootMargin: '-80px 0px -20% 0px' });
+
+  sections.forEach(section => spyObserver.observe(section));
+
+  // Custom smooth scroll with easeInOutCubic
+  function easeInOutCubic(t) {
+    return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+  }
+
+  function smoothScrollTo(target, duration) {
+    duration = duration || 800;
+    const start = window.pageYOffset;
+    const end = target.getBoundingClientRect().top + start - 80;
+    const distance = end - start;
+    let startTime = null;
+
+    function animation(currentTime) {
+      if (startTime === null) startTime = currentTime;
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      window.scrollTo(0, start + distance * easeInOutCubic(progress));
+      if (elapsed < duration) {
+        requestAnimationFrame(animation);
+      }
+    }
+
+    requestAnimationFrame(animation);
+  }
+
+  // Hash link click handlers
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute('href'));
+      if (target) {
+        setActiveLink(target.id);
+        smoothScrollTo(target);
+        if (link.getAttribute('href') === '#contact') {
+          setTimeout(() => {
+            const email = document.getElementById('contactEmail');
+            email.classList.add('glow');
+            setTimeout(() => email.classList.remove('glow'), 3000);
+          }, 900);
+        }
+      }
+    });
+  });
+</script>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="event.stopPropagation();closeLightbox()"></button>
+  <img id="lightbox-img" src="" alt="">
+  <div class="lightbox-label" id="lightbox-label"></div>
+</div>
+
+<script>
+function openLightbox(src,label){
+  document.getElementById('lightbox-img').src=src;
+  document.getElementById('lightbox-label').textContent=label;
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeLightbox(){
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox();});
+</script>
+
+</body>
+</html>
